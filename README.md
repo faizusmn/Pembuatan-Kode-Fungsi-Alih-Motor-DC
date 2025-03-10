@@ -68,7 +68,7 @@ H(s) = $\frac{0.01}{0.01s + 0.1001}$
 ---
 
 ## Implementasi dalam Python  
-Berikut adalah implementasi model ini dalam Python menggunakan **SymPy** dan **control system library** untuk analisis lebih lanjut:  
+Berikut adalah implementasi model ini dalam Python menggunakan **SymPy** untuk analisis lebih lanjut:  
 
 ```python
 import sympy as sp
