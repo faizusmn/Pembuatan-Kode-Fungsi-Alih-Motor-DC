@@ -13,7 +13,7 @@ Motor DC dapat dimodelkan menggunakan dua persamaan utama:
 Persamaan ini menggambarkan hubungan antara tegangan input ($V$), arus armature ($i$), dan kecepatan sudut ($\omega$).  
 
 \
-V(t) = R i(t) + L di(t)/dt + $K_e$ $\omega$ (t)
+V(t) = R i(t) + L $\frac{di(t)}{dt}$ + $K_e$ $\omega$ (t)
 \
 
 **Keterangan:**  
@@ -29,7 +29,7 @@ Persamaan ini menggambarkan hubungan antara torsi motor, kecepatan sudut, dan mo
 
 \
 $K_t$ i(t) = J $\frac{d \omega (t)}{dt}$ + b $\omega$ (t)
-\]
+\
 
 **Keterangan:**  
 - $K_t$ : Konstanta torsi motor (Nm/A)  
@@ -44,14 +44,14 @@ $K_t$ i(t) = J $\frac{d \omega (t)}{dt}$ + b $\omega$ (t)
 Dengan menggunakan Transformasi Laplace ($s$-domain), kedua persamaan di atas menjadi:  
 
 ### Transformasi Laplace dari Persamaan Listrik  
-\[
-V(s) = R I(s) + L s I(s) + K_e \Omega(s)
-\]
+\
+V(s) = R I(s) + L s I(s) + $K_e$ $\Omega$ (s)
+\
 
 ### Transformasi Laplace dari Persamaan Mekanik  
-\[
-K_t I(s) = J s \Omega(s) + b \Omega(s)
-\]
+\
+$K_t$ I(s) = J s $\Omega$ (s) + b $\Omega$ (s)
+\
 
 Dengan menyelesaikan kedua persamaan ini, kita dapat memperoleh hubungan antara $\Omega(s)$ dan $V(s)$.
 
@@ -61,15 +61,15 @@ Dengan menyelesaikan kedua persamaan ini, kita dapat memperoleh hubungan antara 
 
 Fungsi alih atau transfer function adalah hubungan antara kecepatan sudut output $\omega (s)$ dan tegangan input $V(s)$. Dengan menyelesaikan sistem persamaan di atas, diperoleh:  
 
-\[
-H(s) = \frac{\Omega(s)}{V(s)} = \frac{K_t}{(J s + b)(R + L s) + K_t K_e}
-\]
+\
+H(s) = $\frac{\Omega(s)}{V(s)}$ = $\frac{K_t}{(J s + b)(R + L s) + K_t K_e}$
+\
 
 Jika diberikan parameter tertentu, fungsi alih ini dapat disederhanakan menjadi bentuk:  
 
-\[
-H(s) = \frac{0.01}{0.01s + 0.1001}
-\]
+\
+H(s) = $\frac{0.01}{0.01s + 0.1001}$
+\
 
 ---
 
