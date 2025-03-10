@@ -12,9 +12,9 @@ Motor DC dapat dimodelkan menggunakan dua persamaan utama:
 ### Persamaan Listrik  
 Persamaan ini menggambarkan hubungan antara tegangan input ($V$), arus armature ($i$), dan kecepatan sudut ($\omega$).  
 
-\[
-V(t) = R i(t) + L \frac{d i(t)}{dt} + K_e \omega (t)
-\]
+\
+V(t) = R i(t) + L d i(t)/dt + K_e \omega (t)
+\
 
 **Keterangan:**  
 - $V$ : Tegangan input (V)  
