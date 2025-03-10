@@ -13,7 +13,7 @@ Motor DC dapat dimodelkan menggunakan dua persamaan utama:
 Persamaan ini menggambarkan hubungan antara tegangan input ($V$), arus armature ($i$), dan kecepatan sudut ($\omega$).  
 
 \
-V(t) = R i(t) + L d i(t)/dt + ($K_e$) ($\omega$) (t)
+V(t) = R i(t) + L di(t)/dt + $K_e$$\omega$ (t)
 \
 
 **Keterangan:**  
@@ -27,8 +27,8 @@ V(t) = R i(t) + L d i(t)/dt + ($K_e$) ($\omega$) (t)
 ### Persamaan Mekanik  
 Persamaan ini menggambarkan hubungan antara torsi motor, kecepatan sudut, dan momen inersia rotor.  
 
-\[
-K_t i(t) = J \frac{d \omega (t)}{dt} + b \omega (t)
+\
+$K_t$i(t) = J $\frac{d \omega (t)}{dt}$ + b$\omega$ (t)
 \]
 
 **Keterangan:**  
