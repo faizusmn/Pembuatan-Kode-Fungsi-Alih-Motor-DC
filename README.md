@@ -1,19 +1,15 @@
 # Nama: Ibadurahman Faiz Usman
 # NIM: 235150301111032
 
-Berikut adalah penjelasan mengenai model perhitungan yang telah dibuat, yang dapat dimasukkan ke dalam README di GitHub.  
-
----  
-
-# 📌 Model Perhitungan Motor DC  
+# Model Perhitungan Motor DC  
 
 Dokumen ini menjelaskan langkah-langkah dalam membangun model matematika motor DC, melakukan transformasi Laplace, dan menentukan fungsi alih yang menghubungkan kecepatan sudut ($\omega$) dengan tegangan ($V$).  
 
-## 1️⃣ Model Matematika Motor DC  
+## Model Matematika Motor DC  
 
 Motor DC dapat dimodelkan menggunakan dua persamaan utama:  
 
-### ⚡ Persamaan Listrik  
+### Persamaan Listrik  
 Persamaan ini menggambarkan hubungan antara tegangan input ($V$), arus armature ($i$), dan kecepatan sudut ($\omega$).  
 
 \[
@@ -28,7 +24,7 @@ V(t) = R i(t) + L \frac{d i(t)}{dt} + K_e \omega (t)
 - $K_e$ : Konstanta GGL (V.s/rad)  
 - $\omega$ : Kecepatan sudut motor (rad/s)  
 
-### ⚙️ Persamaan Mekanik  
+### Persamaan Mekanik  
 Persamaan ini menggambarkan hubungan antara torsi motor, kecepatan sudut, dan momen inersia rotor.  
 
 \[
@@ -43,16 +39,16 @@ K_t i(t) = J \frac{d \omega (t)}{dt} + b \omega (t)
 
 ---
 
-## 2️⃣ Transformasi Laplace pada Motor DC  
+## Transformasi Laplace pada Motor DC  
 
 Dengan menggunakan Transformasi Laplace ($s$-domain), kedua persamaan di atas menjadi:  
 
-### ⚡ Transformasi Laplace dari Persamaan Listrik  
+### Transformasi Laplace dari Persamaan Listrik  
 \[
 V(s) = R I(s) + L s I(s) + K_e \Omega(s)
 \]
 
-### ⚙️ Transformasi Laplace dari Persamaan Mekanik  
+### Transformasi Laplace dari Persamaan Mekanik  
 \[
 K_t I(s) = J s \Omega(s) + b \Omega(s)
 \]
@@ -61,7 +57,7 @@ Dengan menyelesaikan kedua persamaan ini, kita dapat memperoleh hubungan antara 
 
 ---
 
-## 3️⃣ Fungsi Alih Motor DC ($\omega / V$)  
+## Fungsi Alih Motor DC ($\omega / V$)  
 
 Fungsi alih atau transfer function adalah hubungan antara kecepatan sudut output $\omega (s)$ dan tegangan input $V(s)$. Dengan menyelesaikan sistem persamaan di atas, diperoleh:  
 
@@ -77,7 +73,7 @@ H(s) = \frac{0.01}{0.01s + 0.1001}
 
 ---
 
-## 🔧 Implementasi dalam Python  
+## Implementasi dalam Python  
 Berikut adalah implementasi model ini dalam Python menggunakan **SymPy** dan **control system library** untuk analisis lebih lanjut:  
 
 ```python
@@ -105,7 +101,7 @@ Kode ini menghitung fungsi alih secara simbolik berdasarkan parameter yang diber
 
 ---
 
-## 📊 Simulasi dengan `control` Library  
+## Simulasi dengan `control` Library  
 
 Untuk simulasi respon sistem, kita dapat menggunakan pustaka `control`:  
 
@@ -132,9 +128,5 @@ plt.show()
 
 ---
 
-## 📌 Kesimpulan  
-Model ini menunjukkan bagaimana motor DC dapat direpresentasikan dengan persamaan diferensial, kemudian dikonversi ke domain Laplace untuk memperoleh fungsi alih. Dengan menggunakan Python, kita dapat menyederhanakan fungsi alih dan mensimulasikan respons sistem secara langsung. 🚀  
-
----
-
-Silakan gunakan README ini untuk dokumentasi GitHub! 🎯
+## Kesimpulan  
+Model ini menunjukkan bagaimana motor DC dapat direpresentasikan dengan persamaan diferensial, kemudian dikonversi ke domain Laplace untuk memperoleh fungsi alih. Dengan menggunakan Python, kita dapat menyederhanakan fungsi alih dan mensimulasikan respons sistem secara langsung.
