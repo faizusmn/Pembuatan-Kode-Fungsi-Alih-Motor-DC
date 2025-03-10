@@ -1,8 +1,6 @@
 # Nama: Ibadurahman Faiz Usman
 # NIM: 235150301111032
 
-# Model Perhitungan Motor DC  
-
 Dokumen ini menjelaskan langkah-langkah dalam membangun model matematika motor DC, melakukan transformasi Laplace, dan menentukan fungsi alih yang menghubungkan kecepatan sudut ($\omega$) dengan tegangan ($V$).  
 
 ## Model Matematika Motor DC  
