@@ -1,7 +1,7 @@
 # Nama: Ibadurahman Faiz Usman
 # NIM: 235150301111032
 
-Dokumen ini menjelaskan langkah-langkah dalam membangun model matematika motor DC, melakukan transformasi Laplace, dan menentukan fungsi alih yang menghubungkan kecepatan sudut ($\omega$) dengan tegangan ($V$).  
+Dokumen ini menjelaskan langkah dalam membangun model matematika motor DC, melakukan transformasi Laplace, dan menentukan fungsi alih yang menghubungkan kecepatan sudut ($\omega$) dengan tegangan ($V$).  
 
 ## Model Matematika Motor DC  
 
@@ -66,7 +66,7 @@ H(s) = $\frac{0.01}{0.01s + 0.1001}$
 ---
 
 ## Implementasi dalam Python  
-Berikut adalah implementasi model ini dalam Python menggunakan **SymPy** untuk analisis lebih lanjut:  
+Berikut adalah implementasi model matematika motor DC dalam Python menggunakan **SymPy** untuk analisis lebih lanjut:  
 
 ```python
 import sympy as sp
