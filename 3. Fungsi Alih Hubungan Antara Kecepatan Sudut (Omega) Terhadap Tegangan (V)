@@ -2,7 +2,6 @@
 # NIM: 235150301111032
 
 import sympy as sp
-import control as ctrl
 
 # Definisi variabel simbolik
 t, s = sp.symbols('t s')
@@ -40,11 +39,3 @@ print("\nFungsi Alih sebelum penyederhanaan:")
 sp.pprint(H_s)
 print("\nFungsi Alih setelah penyederhanaan:")
 sp.pprint(sp.simplify(H_s))
-
-# 4. Implementasi dengan Python Control untuk Simulasi
-num = [Kt / R]
-den = [J, (Kt * Ke / R) + B]
-H_tf = ctrl.TransferFunction(num, den)
-
-print("\nFungsi Alih dalam format Control System:\n")
-print(H_tf)
