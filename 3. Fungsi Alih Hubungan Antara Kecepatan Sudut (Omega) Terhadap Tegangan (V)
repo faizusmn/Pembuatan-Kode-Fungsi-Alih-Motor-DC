@@ -1,0 +1,50 @@
+# Nama: Ibadurahman Faiz Usman
+# NIM: 235150301111032
+
+import sympy as sp
+import control as ctrl
+
+# Definisi variabel simbolik
+t, s = sp.symbols('t s')
+V = sp.Function('V')(t)  # Tegangan input V(t)
+i = sp.Function('i')(t)  # Arus i(t)
+ω = sp.Function('ω')(t)  # Kecepatan sudut ω(t)
+
+# Parameter Motor DC (Contoh nilai)
+R = 1     # Ohm (Resistansi)
+L = 0.5   # Henry (Induktansi)
+J = 0.01  # kg.m^2 (Momen inersia)
+B = 0.1   # N.m.s (Damping)
+Kt = 0.01 # N.m/A (Konstanta Torsi)
+Ke = 0.01 # V.s/rad (Konstanta GGL balik)
+
+# 3. Fungsi Alih H(s) = Ω(s) / V(s)
+I_s_expr = sp.solve(eq_laplace_listrik, I_s)[0]  # Menyelesaikan I(s)
+eq_laplace_mekanik = eq_laplace_mekanik.subs(I_s, I_s_expr)  # Substitusi ke persamaan mekanik
+# Selesaikan I(s)
+I_s_expr = sp.solve(eq_laplace_listrik, I_s)[0]
+eq_laplace_mekanik = eq_laplace_mekanik.subs(I_s, I_s_expr)
+# Selesaikan Ω(s)
+Ω_s_expr = sp.solve(eq_laplace_mekanik, Ω_s)[0]
+# Bentuk Fungsi Alih H(s) = Ω(s) / V(s)
+H_s = Ω_s_expr / V_s
+# Lakukan penyederhanaan bertahap
+H_s = sp.simplify(H_s)  # Penyederhanaan awal
+H_s = sp.cancel(H_s)     # Menghilangkan faktor persekutuan
+H_s = sp.factor(H_s)     # Faktorisasi hasil akhir
+
+print("\n\n3. Fungsi Alih Motor DC (ω/V):")
+print("\nEkspresi setelah solve:")
+sp.pprint(Ω_s_expr)
+print("\nFungsi Alih sebelum penyederhanaan:")
+sp.pprint(H_s)
+print("\nFungsi Alih setelah penyederhanaan:")
+sp.pprint(sp.simplify(H_s))
+
+# 4. Implementasi dengan Python Control untuk Simulasi
+num = [Kt / R]
+den = [J, (Kt * Ke / R) + B]
+H_tf = ctrl.TransferFunction(num, den)
+
+print("\nFungsi Alih dalam format Control System:\n")
+print(H_tf)
